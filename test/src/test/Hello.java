@@ -35,7 +35,6 @@ public class Hello {
 
 	public static void list_instance() {
 		// 인스턴스 목록 나열
-
 		boolean done = false;
 
 		DescribeInstancesRequest request = new DescribeInstancesRequest();
@@ -192,7 +191,7 @@ public class Hello {
 			System.out.println("3. start instance               4. available regions");
 			System.out.println("5. stop instance                6. create instance");
 			System.out.println("7. reboot instance              8. list images");
-			System.out.println("                                9. quit");
+			System.out.println("9. public image list            10. quit");
 			System.out.println("------------------------------------------------------------");
 
 			System.out.println("Enter an integer : ");
@@ -225,7 +224,12 @@ public class Hello {
 				list_images();
 				break;
 			case 9:
+				public_image_list();
+				break;
+			case 10:
+			default:
 				System.exit(0);
+			
 			}
 
 		}
